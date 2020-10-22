@@ -1,0 +1,14 @@
+setup.py
+bmw/__init__.py
+bmw/demo.py
+bmw/items.py
+bmw/middlewares.py
+bmw/pipelines.py
+bmw/settings.py
+bmw/spiders/__init__.py
+bmw/spiders/bmw_spider.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt

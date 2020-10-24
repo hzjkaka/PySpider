@@ -10,17 +10,17 @@ class ProductSpider(scrapy.Spider):
     redis_key = None
     name = 'product_spider'
     allowed_domains = ['jd.com','3.cn']
-    # start_urls = ['https://list.jd.com/list.html?cat=737,794,798&ev=4155_76344&sort=sort_rank_asc&trans=1&JL=2_1_0#J_crumbsBar']
-    def start_requests(self):
-        #重写start_requests方法,使用分类信息来构造列表页
-        p_category =   { "b_c_name": "家用电器",
-                        "b_c_url": "https://jiadian.jd.com",
-                        "m_c_name": "电视",
-                        "m_c_url": "https://list.jd.com/list.html?cat=737,794,798",
-                        "s_c_name": "超薄电视",
-                        "s_c_url": "https://list.jd.com/list.html?cat=737,794,798&ev=4155_76344&sort=sort_rank_asc&trans=1&JL=2_1_0#J_crumbsBar"
-    }
-        yield scrapy.Request(url=p_category['s_c_url'],callback=self.parse,meta={'p_category':p_category})
+    start_urls = ['https://list.jd.com/list.html?cat=737,794,798&ev=4155_76344&sort=sort_rank_asc&trans=1&JL=2_1_0#J_crumbsBar']
+#     def start_requests(self):
+#         #重写start_requests方法,使用分类信息来构造列表页
+#         p_category =   { "b_c_name": "家用电器",
+#                         "b_c_url": "https://jiadian.jd.com",
+#                         "m_c_name": "电视",
+#                         "m_c_url": "https://list.jd.com/list.html?cat=737,794,798",
+#                         "s_c_name": "超薄电视",
+#                         "s_c_url": "https://list.jd.com/list.html?cat=737,794,798&ev=4155_76344&sort=sort_rank_asc&trans=1&JL=2_1_0#J_crumbsBar"
+#     }
+#         yield scrapy.Request(url=p_category['s_c_url'],callback=self.parse,meta={'p_category':p_category})
 
     #解析列表页信息，获取详情页的URL和实现翻页
     def parse(self, response):

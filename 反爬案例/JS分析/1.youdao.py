@@ -16,18 +16,7 @@ import jsonpath
 class YdaoSpider(object):
     def __init__(self,word):
         self.url = 'http://fanyi.youdao.com/translate_o?smartresult=dict&smartresult=rule'
-        # self.headers = {'User-Agent':UserAgent().random,
-        #                  'Origin': 'http://fanyi.youdao.com',
-        #                  'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8',
-        #                  'X-Requested-With':'XMLHttpRequest',
-        #                  'Accept':'application/json, text/javascript, */*; q=0.01',
-        #                  'Accept-Encoding':'gzip, deflate',
-        #                  'Accept-Language':'zh-CN,zh;q=0.9',
-        #                  'Connection': 'keep-alive',
-        #                  'Host': 'fanyi.youdao.com',
-        #                 'Cookie':'_ntes_nnid=e70a07f5bc3c025f2e03102083342ee0,1576931523131; OUTFOX_SEARCH_USER_ID_NCOO=576637093.1233677; OUTFOX_SEARCH_USER_ID=-310225030@218.85.66.37; P_INFO=hzjkaka; DICT_UGC=be3af0da19b5c5e6aa4e17bd8d90b28a|; JSESSIONID=abcFrtHpUpOAc4IaBIKqx; ___rl__test__cookies=159834660629',
-        #                 'Referer': 'http: // fanyi.youdao.com/'
-        #                 }
+  
         self.headers={'User-Agent':UserAgent().random,
                      'Referer':'http://fanyi.youdao.com/',
                      'Origin': 'http://fanyi.youdao.com',
